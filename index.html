@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Event 2024</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#map">Map</a>
+        
+        <a href="#about">Join</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 style="color: navy; font-weight: 900; font-size: 30px;">THE BIGGEST TECH EVENT IN THE<br>CITY OF OWERRI</h1>
+        
+            <!-- <h1 style="font-size: 3rem; margin-bottom: 2rem;">THE BIGGEST TECH EVENT</h1> -->
+
+            <marquee class="image-scroll" behavior="scroll" direction="left">
+                <img src="assets/images/IMG-20241119-WA0034.jpg" alt="img1">
+                <img src="assets/images/IMG-20241119-WA0035.jpg" alt="img2">
+                <img src="assets/images/IMG-20241119-WA0031.jpg" alt="img3">
+            </marquee>
+
+            <p style="font-size: 1.2rem; max-width: 600px;font-weight: 700;  margin: 0 auto;">
+                What better fun than getting to experience newer thrills of learning about the improvement of our technological<br>lives.
+                <br>
+                <br>
+                DO NOT MISS THIS OPPORTUNITY
+                <br>
+                <br>
+                Learn more about coding, Improve your skills, Meet<br>people, Gain experience, HAVE FUN
+            </p>
+            <button class="floating" style="margin-top: 2rem; background: linear-gradient(to left, blue, purple); color: white; padding: 10px; outline: none; border: 2px solid purple; border-radius: 10px; width: 20%; text-transform: uppercase;">
+                Get started
+            </button>
+        </div>
+    </section>
+
+    <section class="team-section" id="speakers">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Our Speakers</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="assets/images/IMG-20241119-WA0032.jpg" alt="Speaker 1" style="width: 100%; height: auto; border-radius: 10px;">
+                <h3 style="margin-top: 1rem;">Tech Leader</h3>
+                <p>AI & Machine Learning Expert</p>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/IMG-20241119-WA0027.jpg" alt="Speaker 2" style="width: 100%; height: auto; border-radius: 10px;">
+                <h3 style="margin-top: 1rem;">Innovation Director</h3>
+                <p>Blockchain Specialist</p>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/IMG-20241119-WA0022.jpg" alt="Speaker 3" style="width: 100%; height: auto; border-radius: 10px;">
+                <h3 style="margin-top: 1rem;">Tech Visionary</h3>
+                <p>Future Technologies Expert</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section" id="map">
+        <h1 align="center" style="color: white;">Visit Us</h1>
+        <div class="map-container">
+            <img src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg" alt="Event Location Map" style="width: 100%; height: auto;">
+        </div>
+    </section>
+
+    <!-- Join Form -->
+    <section id="about" style="padding: 4rem 2rem;">
+        <div class="join-form">
+            <h2 style="margin-bottom: 2rem; text-align: center;">JOIN US</h2>
+            <form id="registration-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Company">
+                <input type="tel" placeholder="Phone">
+                <input type="text" placeholder="Role">
+                <div class="button-container">
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div class="success-modal" id="success-modal">
+        <div class="success-content">
+            <div class="checkmark">
+                👍🏾
+            </div>
+            <div>
+                <h2 class="success-title">REGISTERED<br>SUCCESSFULLY</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const modal = document.getElementById('success-modal');
+            modal.classList.add('active');
+        });
+
+        function closeModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('active');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('success-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
